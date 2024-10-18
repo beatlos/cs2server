@@ -1,0 +1,13 @@
+---
+- name: Setup azuracast
+  hosts: all
+  gather_facts: no
+
+  tasks:
+    - name: Create a directory /var/azuracast
+      ansible.builtin.file:
+        path: /var/azuracast
+        state: directory
+        mode: '0755'
+        
+
